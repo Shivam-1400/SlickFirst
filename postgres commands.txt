@@ -1,0 +1,22 @@
+select * from movies."Movie";
+
+
+C:\Users\Dell\All_Projects\IntelliJ\slick\SlickFirst>docker-compose up
+docker-compose up
+docker-compose down
+
+
+
+
+C:\Users\Dell\All_Projects\IntelliJ\slick\SlickFirst>docker ps
+CONTAINER ID   IMAGE      COMMAND                  CREATED         STATUS         PORTS                    NAMES
+b29f9045b9e4   postgres   "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes   0.0.0.0:5432->5432/tcp   slickfirst-db-1
+
+C:\Users\Dell\All_Projects\IntelliJ\slick\SlickFirst>docker exec -it slickfirst-db-1 psql -U postgres
+psql (16.1 (Debian 16.1-1.pgdg120+1))
+Type "help" for help.
+
+postgres=# select * from movies."Movie";
+ movie_id | name | release_date | length_in_min
+----------+------+--------------+---------------
+(0 rows)
