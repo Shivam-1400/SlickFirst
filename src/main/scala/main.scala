@@ -45,6 +45,7 @@ object main {
       case Failure(exception) => println(s"Query Failed, reason :- $exception")
     }
   }
+
   def demoReadAllMovies():Unit={
     val resultFuture: Future[Seq[Movie]] = Connection.db.run(SlickTables.movieTable.result)  // select * from tableX
     resultFuture.onComplete{
